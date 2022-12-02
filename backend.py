@@ -42,26 +42,26 @@ def queryState(id):
     for agent in model.schedule.agents:
         if type(agent) == Coche:
             coche = dict()
-            coches["id"] = agent.unique_id
-            coches["x"] = agent.pos[0]
-            coches["y"] = agent.pos[1]
-            coches["orient"] = agent.orientation
+            coche["id"] = agent.unique_id
+            coche["x"] = agent.pos[0]
+            coche["y"] = agent.pos[1]
+            coche["orient"] = agent.orientation
             coches.append(coche)
 
         elif type(agent) == Semaforo:
             semaforo = dict()
-            semaforos["id"] = agent.unique_id
-            semaforos["color"] = agent.light
-            semaforos["working"] = agent.working_time
-            semaforos["orient"] = agent.orientation
+            semaforo["id"] = agent.unique_id
+            semaforo["color"] = agent.light
+            semaforo["working"] = agent.working_time
+            semaforo["orient"] = agent.orientation
             semaforos.append(semaforo)
 
         elif type(agent) == Banquetas:
             banqueta = dict()
-            banquetas["id"] = agent.unique_id
-            banquetas["x"] = agent.pos[0]
-            banquetas["y"] = agent.pos[1]
-            banuqetas["orient"] = agent.orientation
+            banqueta["id"] = agent.unique_id
+            banqueta["x"] = agent.pos[0]
+            banqueta["y"] = agent.pos[1]
+            banuqeta["orient"] = agent.orientation
             banuqetas.append(banqueta)
 
     dictionary["coches"] = coches
