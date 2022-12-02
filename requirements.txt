@@ -1,0 +1,7 @@
+pip
+flask
+flask_cors
+mesa
+pathfinding
+numpy
+pandas
