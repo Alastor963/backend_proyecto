@@ -61,8 +61,8 @@ def queryState(id):
             banqueta["id"] = agent.unique_id
             banqueta["x"] = agent.pos[0]
             banqueta["y"] = agent.pos[1]
-            banuqeta["orient"] = agent.orientation
-            banuqetas.append(banqueta)
+            banqueta["orient"] = agent.orientation
+            banquetas.append(banqueta)
 
     dictionary["coches"] = coches
     dictionary["semaforos"] = semaforos
