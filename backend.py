@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask.json import jsonify
 import uuid
 from coches import *
+import os
 
 games = {}
 
