@@ -11,6 +11,10 @@ CORS(app)
 
 port = int(os.getenv('PORT', 8000))
 
+@app.route("/")
+def root():
+    return jsonify([{"message": "Hoooooola! :)"}])
+
 @app.route("/games", methods=["POST"])
 def create():
     global games
@@ -64,8 +68,6 @@ def queryState(id):
     dictionary["banquetas"] = banquetas
 
     return jsonify(dictionary)
-
-app.run()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port, debug=True)
