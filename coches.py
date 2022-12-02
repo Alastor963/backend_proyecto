@@ -384,6 +384,7 @@ class Calle(Model):
               b.append({"id": n.unique_id, "pos":[n.pos[0], n.pos[1]], "o": n.orientation})
       return b
 
+"""
 def agent_portrayal(agent):
 
 
@@ -424,3 +425,4 @@ server = ModularServer(
 
 server.port = 8522 #
 server.launch()
+"""
