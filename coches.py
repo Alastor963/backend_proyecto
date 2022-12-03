@@ -5,6 +5,7 @@ from collections import defaultdict
 from mesa.time import RandomActivation
 from mesa.visualization.ModularVisualization import ModularServer
 from mesa.visualization.modules import CanvasGrid
+import os
 
 class RandomActivationByBreed(RandomActivation):
 
@@ -384,7 +385,6 @@ class Calle(Model):
               b.append({"id": n.unique_id, "pos":[n.pos[0], n.pos[1]], "o": n.orientation})
       return b
 
-"""
 def agent_portrayal(agent):
 
 
@@ -423,6 +423,6 @@ server = ModularServer(
     Calle, [grid], " Test"
 )
 
-server.port = 8522 #
+server.port = int(os.getenv('PORT', 8000))
+# server.port = 8522 #
 server.launch()
-"""
